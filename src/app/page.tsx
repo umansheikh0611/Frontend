@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen "
-    onContextMenu={(e) => e.preventDefault()}>
+    <div className="flex flex-col h-screen ">
 <Button>    <Link href={'/signup'}>Sign Up</Link></Button>
 
     </div>

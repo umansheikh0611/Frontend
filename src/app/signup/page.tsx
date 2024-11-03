@@ -15,8 +15,7 @@ export default function MainComponent() {
 
 
     return (
-        <main className="flex flex-wrap overflow-x-hidden "
-        onContextMenu={(e) => e.preventDefault()}>
+        <main className="flex flex-wrap overflow-x-hidden ">
             <LeftSide />
     
             {isLogin ? (
