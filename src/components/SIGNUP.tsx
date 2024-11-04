@@ -5,16 +5,15 @@ type LoginProps = {
 };
 export default function SignUp({ toggleForm }: LoginProps){
   return (
-    <section className="h-100vh flex justify-center items-center flex-col py-20 p-2
+    <section className="h-100vh flex justify-center items-center flex-col py-20 px-5
      lg:w-1/2
     md:w-full
     ">
-      <div className=" w-96 flex flex-col gap-5">
+      <div className=" w-80 flex flex-col gap-5">
         <div>
           <h2 className="font-bold text-2xl">Sign Up for an Account</h2>
         </div>
-        <div className=" flex flex-col items-start justify-cente  gap-5
-        lg:pr-10 ">
+        <div className=" flex flex-col items-start justify-cente  gap-5 ">
           <input
             type="text"
             id="firstName"
