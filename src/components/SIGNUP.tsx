@@ -1,9 +1,17 @@
+import { useState } from 'react';
+import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from 'react-icons/fa';
 import { Button } from "@/components/ui/button";
 
 type LoginProps = {
   toggleForm: () => void;
 };
 export default function SignUp({ toggleForm }: LoginProps){
+  const [isPasswordVisible, setPasswordVisible] = useState(false);
+
+  // Function to toggle password visibility
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!isPasswordVisible);
+  };
   return (
     <section className="h-100vh flex justify-center items-center flex-col py-20 px-5
      lg:w-1/2
@@ -14,46 +22,45 @@ export default function SignUp({ toggleForm }: LoginProps){
           <h2 className="font-bold text-2xl">Sign Up for an Account</h2>
         </div>
         <div className=" flex flex-col items-start justify-cente  gap-5 ">
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="Last name"
-            required
-            className=" bg-transparent border rounded-lg w-full p-3  "
-          />
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            placeholder="First name"
-      className=" bg-transparent border rounded-lg w-full p-3  "
-            required
-          />
-          <select id="category" name="category"
-          className=" bg-transparent border rounded-lg w-full p-3  " required>
-            <option value="">Select a category</option>
-            <option value="Student">Student</option>
-            <option value="Teacher">Teacher</option>
-            <option value="Professional">Professional</option>
-            <option value="Other">Other</option>
-          </select>
+        <div className='relative w-full' >
+
+            <FaEnvelope className='absolute left-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500' />
           <input
             type="email"
             id="email"
             name="email"
             placeholder="Email"
             required
-            className=" bg-transparent border rounded-lg w-full p-3  "
+            className="bg-transparent border rounded-lg w-full p-3 pl-10"
           />
+          
+          </div>
+          <div className="relative w-full">
+          <FaLock className='absolute left-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500' />
+            <input
+              type={isPasswordVisible ? 'text' : 'password'}
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+              className="bg-transparent border rounded-lg w-full p-3 pr-10 pl-10" // added padding-right for icon space
+            />
+            <span
+              onClick={togglePasswordVisibility}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
+            >
+              {isPasswordVisible ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
           <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
+          type="password"
+            id=  " confirm password"
+            name="confirm password"
+            placeholder="Confirm Password"
             required
             className=" bg-transparent border rounded-lg w-full p-3  "
           />
+             
         </div>
         <div>
         <div>
