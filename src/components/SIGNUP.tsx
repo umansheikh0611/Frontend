@@ -43,7 +43,7 @@ export default function SignUp({ toggleForm }: LoginProps){
               name="password"
               placeholder="Password"
               required
-              className="bg-transparent border rounded-lg w-full p-3 pr-10 pl-10" // added padding-right for icon space
+              className="bg-transparent border rounded-lg w-full p-3 pr-10 pl-10"
             />
             <span
               onClick={togglePasswordVisibility}
@@ -52,14 +52,17 @@ export default function SignUp({ toggleForm }: LoginProps){
               {isPasswordVisible ? <FaEyeSlash /> : <FaEye />}
             </span>
           </div>
+        <div className="relative w-full">
+        <FaLock className='absolute left-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 ' />
           <input
           type="password"
             id=  " confirm password"
             name="confirm password"
             placeholder="Confirm Password"
             required
-            className=" bg-transparent border rounded-lg w-full p-3  "
+            className=" bg-transparent border rounded-lg w-full p-3 pl-10  "
           />
+        </div>
              
         </div>
         <div>

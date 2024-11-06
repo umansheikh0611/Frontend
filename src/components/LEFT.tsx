@@ -4,7 +4,7 @@ export default function LeftSide(){
        <section className="h-[100vh] bg-[#2563eb]  flex flex-col p-10
 w-full
 lg:w-1/2 ">
-        <div className="logo flex gap-2 p-5 
+        <div className="p-5 
         lg:p-8">
             <Image src={'/logo.png'} alt="" width={200}  height={200}/>
            

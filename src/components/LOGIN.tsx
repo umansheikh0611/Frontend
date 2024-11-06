@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { FaEye, FaEyeSlash,  FaLock , FaEnvelope} from 'react-icons/fa';
 import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 type LoginProps = {
   toggleForm: () => void;
 };
@@ -58,13 +59,15 @@ export default function Login({ toggleForm }: LoginProps) {
         <div>
           <p className="text-xs text-gray-500">Your password must have at least 8 characters</p>
           
+          <div className='flex justify-between items-center' >
           <div className="flex justify-start items-start gap-3 py-5">
             <input type="checkbox" className="transform scale-150" />
             <p className="text-sm text-gray-500">
-              By creating an account means you agree to the 
-              <span className="text-black font-bold"> Terms & Conditions</span> and 
-              <span className="text-black font-bold"> our Privacy Policy</span>
+             Remember me
             </p>
+          </div>
+          <Link href={'/'} className="text-blue-600 text-sm cursor-pointer">Forget Password?</Link>
+
           </div>
         </div>
         
@@ -74,8 +77,8 @@ export default function Login({ toggleForm }: LoginProps) {
         
         <div>
           <p className="text-sm text-gray-500">
-            {`Don't have an account?`} 
-            <span onClick={toggleForm} className="text-blue-600 cursor-pointer"> Sign Up</span>
+            {`Not registered yet?`} 
+            <span onClick={toggleForm} className="text-blue-600 cursor-pointer"> Create an Account</span>
           </p>
         </div>
       </div>
