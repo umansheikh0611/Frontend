@@ -19,12 +19,14 @@ export default function SideBar() {
   return (
     <>
       {/* Hamburger Menu Button for Small Screens */}
-      <button
+     <div className="w-full lg:hidden bg-white h-16 px-10 fixed top-0 z-10  flex justify-end items-center " >
+     <button
         onClick={toggleSidebar}
-        className="lg:hidden p-2 fixed top-5 left-5 z-10  rounded-lg text-3xl"
+        className="lg:hidden text-3xl"
       >
         {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
       </button>
+     </div>
 
       {/* Sidebar */}
       <section
@@ -37,7 +39,7 @@ export default function SideBar() {
         </div>
         <ul className="flex flex-col gap-5 text-gray-500">
           <li className="w-full p-3 rounded-xl hover:text-white hover:bg-purple-400 cursor-pointer">
-            <Link href={'/'} className="flex gap-3 items-center">
+            <Link href={'/dashboard'} className="flex gap-3 items-center">
               <CgShapeHexagon />
               Dashboard
             </Link>

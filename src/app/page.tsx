@@ -8,9 +8,10 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen ">
+    <div className="flex flex-col h-screen gap-5 ">
 <Button>    <Link href={'/signup'}>Sign Up</Link></Button>
-
+<Button>    <Link href={'/dashboard'}>Dashboard</Link></Button>
+<Button>    <Link href={'/profile'}>Profile</Link></Button>
     </div>
   );
 }

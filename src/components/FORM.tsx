@@ -1,6 +1,6 @@
 export default function ProfileForm(){
     return(
-        <section className="  my-10" >
+        <section className=" w-full  my-10" >
  <form className="flex flex-wrap justify-center gap-2">
   <label className="clinic-label">
     Clinic Name
