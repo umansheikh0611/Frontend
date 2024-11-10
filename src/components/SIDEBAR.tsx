@@ -38,20 +38,20 @@ export default function SideBar() {
           <Image src={'/DarkLogo.png'} alt="" width={200} height={200} />
         </div>
         <ul className="flex flex-col gap-5 text-gray-500">
-          <li className="w-full p-3 rounded-xl hover:text-white hover:bg-purple-400 cursor-pointer">
+          <li className="w-full p-3 rounded-xl hover:text-white hover:bg-blue-600 cursor-pointer">
             <Link href={'/dashboard'} className="flex gap-3 items-center">
               <CgShapeHexagon />
               Dashboard
             </Link>
           </li>
-          <li className="w-full p-3 rounded-xl hover:text-white hover:bg-purple-400 cursor-pointer">
-            <Link href={'/'} className="flex gap-3 items-center">
+          <li className="w-full p-3 rounded-xl hover:text-white hover:bg-blue-600 cursor-pointer">
+            <Link href={'/activity'} className="flex gap-3 items-center">
               <PiUserRectangleLight className="text-2xl" />
-              Leads
+              Activity
             </Link>
           </li>
-          <li className="w-full p-3 rounded-xl hover:text-white hover:bg-purple-400 cursor-pointer">
-            <Link href={'/'} className="flex gap-3 items-center">
+          <li className="w-full p-3 rounded-xl hover:text-white hover:bg-blue-600 cursor-pointer">
+            <Link href={'/messaging'} className="flex gap-3 items-center">
               <RxEnvelopeOpen />
               Messages
             </Link>
