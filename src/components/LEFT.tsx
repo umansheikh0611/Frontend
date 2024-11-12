@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function LeftSide(){
     return(
-       <section className="h-[100vh] bg-[#2563eb]  flex flex-col p-10
+       <section className="h-full bg-[#2563eb]  flex flex-col p-10
 w-full
 lg:w-1/2 ">
         <div className="p-5 

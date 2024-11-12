@@ -5,6 +5,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.angle{
+  clip-path: polygon(96% 0%, 100% 50%, 96% 100%, 0% 100%, 4% 50%, 0% 0%);
+}
 .clinic-label {
   display: flex;
   flex-direction: column;

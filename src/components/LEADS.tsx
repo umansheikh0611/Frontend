@@ -60,12 +60,13 @@ text-green-800">
     </div>
       <div className="w-full bg-white p-7 rounded-3xl overflow-x-auto">
         {/* Header */}
-        <div className="w-full flex justify-between mb-5">
+        <div className="min-w-[800px] w-full flex justify-between mb-5">
           <div className="flex flex-col gap-2">
             <h2 className="text-3xl font-bold">All Leads</h2>
             <p className="text-green-500">Active Members</p>
           </div>
-          <div className="flex gap-2 p-3 bg-gray-100 h-10 items-center rounded-xl">
+          <div className="flex gap-2" >
+            <div className="flex gap-2 p-3 bg-gray-100 h-10 items-center rounded-xl">
             <CiSearch />
             <input
               type="text"
@@ -74,6 +75,17 @@ text-green-800">
               placeholder="search.."
               className="bg-transparent focus:outline-none"
             />
+          </div>
+          <div className="flex gap-2 p-3 bg-gray-100 h-10 items-center rounded-xl">
+            <span className="text-gray-400 text-sm ">Sort by:</span>
+            <select
+                    className=" bg-transparent text-gray-900 "
+                >
+                    <option value="Newest">Newest</option>
+                    <option value="latest">Latest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+          </div>
           </div>
         </div>
 
@@ -85,7 +97,8 @@ text-green-800">
               <th className="w-[150px] text-left p-2">Coustmer Name</th>
               <th className="w-[150px] text-left p-2">Condition</th>
               <th className="w-[150px] text-left p-2">Email</th>
-              <th className="w-[150px] text-left p-2">Phone Number</th>
+              <th className="w-[200px] text-left p-2">Phone Number</th>
+              <th className="w-30 text-left">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -95,7 +108,19 @@ text-green-800">
                 <td className="w-[150px] p-2">{LEAD.customer}</td>
                 <td className="w-[150px] p-2">{LEAD.condition}</td>
                 <td className="w-[150px] p-2">{LEAD.email}</td>
-                <td className="w-[150px] p-2">{LEAD.contact}</td>
+                <td className="w-[200px] p-2">{LEAD.contact}</td>
+                <td  className="w-[150px] p-2" >
+                  <span   className={` w-full text-left truncate overflow-hidden whitespace-nowrap cursor-pointer ${
+                    LEAD.status === "active"
+                      ? "bg-green-200 border border-green-500 px-3 py-1 rounded text-green-900"
+                      : "bg-red-200 border border-red-500 px-3 py-1 rounded text-red-900"
+                  }`}
+                  title={LEAD.status} >
+                      {LEAD.status}
+                  </span>
+                
+                </td>
+
               </tr>
             ))}
           </tbody>

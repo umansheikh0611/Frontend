@@ -19,7 +19,7 @@ export default function SideBar() {
   return (
     <>
       {/* Hamburger Menu Button for Small Screens */}
-     <div className="w-full lg:hidden bg-white h-16 px-10 fixed top-0 z-10  flex justify-end items-center " >
+     <div className="w-full shadow-lg lg:hidden bg-white h-16 px-10 fixed top-0 z-50  flex justify-end items-center " >
      <button
         onClick={toggleSidebar}
         className="lg:hidden text-3xl"
@@ -32,7 +32,7 @@ export default function SideBar() {
       <section
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 w-full md:w-[250px] h-[100vh] fixed top-0 left-0 bg-white shadow-xl p-10 flex flex-col gap-10 transition-transform duration-300 ease-in-out`}
+        } lg:translate-x-0 w-full md:w-[250px] h-[100vh]  fixed  top-0 left-0 bg-white shadow-xl p-10 flex flex-col gap-10 transition-transform duration-300 ease-in-out`}
       >
         <div className="py-5 pt-10 " >
           <Image src={'/DarkLogo.png'} alt="" width={200} height={200} />

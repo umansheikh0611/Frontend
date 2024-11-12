@@ -6,7 +6,7 @@ export default function dashboard(){
 <main className="bg-gray-200 flex overflow-x-hidden 
 lg:pl-[250px]
 md:pl-0" >
-<SideBar/>
+<SideBar  />
 <Leads/>
 </main>    )
 }

@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Button } from "./ui/button"
 export default function ProfileHead(){
     return(
-        <section className="flex items-center gap-10 justify-between flex-wrap " >
+        <section className="flex items-center gap-10 justify-between flex-wrap p-10 " >
           <div className="flex items-center gap-10 " >
           <div className="rounded-full overflow-hidden w-[150px] h-[150px]">
     <Image 

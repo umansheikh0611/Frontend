@@ -5,7 +5,8 @@ export const LEADS = [
         customer: "Jane Cooper",
         condition: "Neck Pain",
         email: "jane@microsoft.com",
-        contact: "(225) 555-0118"
+        contact: "(225) 555-0118",
+        status:"active",
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const LEADS = [
         customer: "Floyd Miles",
         condition: "Neck Pain",
         email: "floyd@yahoo.com",
-        contact: "(205) 555-0100"
+        contact: "(205) 555-0100",
+        status:"active",
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ export const LEADS = [
         customer: "Ronald Richards",
         condition: "Neuropathy",
         email: "ronald@adobe.com",
-        contact: "(302) 555-0107"
+        contact: "(302) 555-0107",
+        status:"inactive",
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const LEADS = [
         customer: "Marvin McKinney",
         condition: "Knee Pain",
         email: "marvin@tesla.com",
-        contact: "(252) 555-0126"
+        contact: "(252) 555-0126",
+        status:"active",
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ export const LEADS = [
         customer: "Jerome Bell",
         condition: "Arthritis",
         email: "jerome@google.com",
-        contact: "(629) 555-0129"
+        contact: "(629) 555-0129",
+        status:"inactive",
     },
     {
         id: 6,
@@ -45,7 +50,8 @@ export const LEADS = [
         customer: "Kathryn Murphy",
         condition: "Neuropathy",
         email: "kathryn@microsoft.com",
-        contact: "(406) 555-0120"
+        contact: "(406) 555-0120",
+        status:"active",
     },
     {
         id: 7,
@@ -53,7 +59,8 @@ export const LEADS = [
         customer: "Jacob Jones",
         condition: "Neck Pain",
         email: "jacob@yahoo.com",
-        contact: "(208) 555-0112"
+        contact: "(208) 555-0112",
+        status:"inactive",
     },
     {
         id: 8,
@@ -61,7 +68,8 @@ export const LEADS = [
         customer: "Kristin Watson",
         condition: "Back Pain",
         email: "kristin@facebook.com",
-        contact: "(704) 555-0127"
+        contact: "(704) 555-0127",
+        status:"active",
     }
 ]
 
