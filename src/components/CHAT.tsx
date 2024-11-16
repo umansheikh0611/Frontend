@@ -197,7 +197,7 @@ export default function Chat() {
 
             {/* User Info */}
             <div
-              className={`w-[300px] h-full bg-[#fafafa] p-5 border flex flex-col ${
+              className={`w-[300px] h-screen bg-[#fafafa] p-5 border flex flex-col ${
                 isSidebarOpen ? "block absolute top-0 right-0 h-screen  " : "hidden"
               } lg:block  `}
             >
