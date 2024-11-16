@@ -15,7 +15,7 @@ export default function MainComponent() {
 
 
     return (
-        <main className="flex flex-wrap overflow-x-hidden ">
+        <main className="flex flex-wrap overflow-x-hidden  ">
             <LeftSide />
     
             {isLogin ? (

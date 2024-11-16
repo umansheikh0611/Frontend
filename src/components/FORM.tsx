@@ -1,7 +1,7 @@
 export default function ProfileForm(){
     return(
         <section className="w-full  lg:w-[80vw] xl:w-[70vw] flex justify-center my-10" >
- <form className="flex flex-wrap justify-center gap-2">
+ <form className="flex flex-wrap justify-center gap-5">
   <label className="clinic-label">
     Clinic Name
     <input type="text" name="clinicName" placeholder="Your Clinic Name" className="clinic-input" />

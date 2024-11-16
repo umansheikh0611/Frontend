@@ -17,10 +17,9 @@ body {
 
 .clinic-input {
   padding: 8px 20px;
-  border: 1px solid #d1d5db; /* This is a gray color similar to `border-gray-300` in Tailwind */
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  font-size: 1rem; /* Equivalent to text-1xl */
-  margin: 8px ;
+  font-size: 1rem; 
   outline: none;
 }
 
