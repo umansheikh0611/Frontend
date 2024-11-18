@@ -201,23 +201,7 @@ export const contacts = [
       { sender: "Xiao Ming", message: "Thank you!", time: "Yesterday, 3:25 PM" },
     ],
   },
-  {
-    id: 7,
-    name: "Kristin Watson",
-    message: "Let me know if you need more info.",
-    time: "Yesterday",
-    unreadCount: 3,
-    image: ProfileImage7,
-    condition: "No condition",
-    email: "kristin@domain.com",
-    contact: "(333) 555-0654",
-    status: "active",
-    chatHistory: [
-      { sender: "Kristin Watson", message: "Let me know if you need more info.", time: "Yesterday, 4:00 PM" },
-      { sender: "You", message: "Got it, will do.", time: "Yesterday, 4:05 PM" },
-      { sender: "Kristin Watson", message: "Thanks so much!", time: "Yesterday, 4:10 PM" },
-    ],
-  },
+ 
   {
     id: 8,
     name: "Liam Harrison",

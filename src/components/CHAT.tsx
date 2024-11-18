@@ -4,9 +4,17 @@ import { useState } from "react";
 import { IoAdd } from "react-icons/io5";
 import Image from "next/image";
 import { contacts, Contact } from "../app/data/detail"; // Importing contacts data and Contact type
-import { MdOutlinePhone, MdOutlineInsertEmoticon } from "react-icons/md";
-import { BsLayoutSidebarReverse, BsThreeDotsVertical, BsSendFill } from "react-icons/bs";
+import {
+  MdOutlinePhone,
+  MdOutlineInsertEmoticon,
+} from "react-icons/md";
+import {
+  BsLayoutSidebarReverse,
+  BsThreeDotsVertical,
+  BsSendFill,
+} from "react-icons/bs";
 import { FiLink } from "react-icons/fi";
+import { SlMagnifier } from "react-icons/sl";
 
 // Defining the shape of a single chat message
 interface ChatMessage {
@@ -37,18 +45,27 @@ export default function Chat() {
 
   return (
     <section>
-      <div className="w-full flex relative">
+      <div className="w-full h-screen  flex relative">
         {/* Contacts List */}
         <div
-          className={`w-full lg:w-[330px] bg-gray-50 p-3 flex flex-col gap-2 ${
-            isChatOpen ? "hidden lg:flex" : ""
-          }`}
-        >
+  className={`w-full min-w-[300px] h-full overflow-y-auto overflow-x-hidden lg:w-[330px] bg-gray-50 p-3 flex flex-col gap-2 ${
+    isChatOpen ? "hidden lg:flex" : ""
+  }`}
+>
+
           <div className="flex px-2 justify-between">
             <h2 className="text-2xl font-bold">Chat</h2>
             <div className="bg-blue-600 p-1 rounded">
               <IoAdd className="text-2xl text-white" />
             </div>
+          </div>
+          <div className="search w-full h-16 flex items-center bg-white gap-5 px-3 rounded border border-gray-500">
+            <SlMagnifier className="text-1xl" />
+            <input
+              type="text"
+              placeholder="Search.."
+              className="w-full h-full focus:outline-none"
+            />
           </div>
 
           <div className="messaging-container flex flex-col">
@@ -86,25 +103,11 @@ export default function Chat() {
           </div>
         </div>
 
-        {/* Placeholder when no chat is open */}
-        {!selectedContact && (
-          <div className="w-full items-center justify-center hidden lg:flex">
-            <div className="text-center p-10">
-              <h2 className="text-2xl font-bold text-gray-500">
-                Select a chat to start messaging
-              </h2>
-              <p className="text-gray-400 mt-2">
-                Choose a contact from the left to view and start a conversation.
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* Chat Box */}
+        {/* Chat and Sidebar */}
         {selectedContact && (
-          <div className="flex w-full">
+          <div className="flex w-full h-screen">
             <div
-              className={`w-full h-full bg-white border flex flex-col p-3 ${
+              className={`w-full h-screen bg-white border flex flex-col p-3 ${
                 !isChatOpen ? "hidden lg:flex" : ""
               }`}
             >
@@ -132,7 +135,7 @@ export default function Chat() {
               </div>
 
               {/* Chat Messages */}
-              <div className="w-full h-full bg-gray-100 mt-5 rounded-xl p-4 overflow-y-auto sm:h-[70vh]">
+              <div className="w-full h-[100%] bg-gray-100 mt-5 rounded-xl p-4 overflow-y-auto">
                 {selectedContact.chatHistory.length === 0 ? (
                   <div className="w-full flex items-center justify-center">
                     <div className="text-center p-10">
@@ -195,43 +198,41 @@ export default function Chat() {
               </div>
             </div>
 
-            {/* User Info */}
+            {/* User Info Sidebar */}
             <div
               className={`w-[300px] h-screen bg-[#fafafa] p-5 border flex flex-col ${
-                isSidebarOpen ? "block absolute top-0 right-0 h-screen  " : "hidden"
-              } lg:block  `}
+                isSidebarOpen ? "block absolute top-0 right-0 h-screen" : "hidden"
+              } lg:block`}
             >
-             <div className="flex flex-col gap-5" >
-             <div className="flex items-center justify-between">
-                <h2 className="text-lg font-bold text-gray-700">User Info</h2>
-                <BsLayoutSidebarReverse onClick={toggleSidebar}  className={`${isSidebarOpen ? "block" : "hidden"}`}/>
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-lg font-bold text-gray-700">User Info</h2>
+                  <BsLayoutSidebarReverse
+                    onClick={toggleSidebar}
+                    className={`${
+                      isSidebarOpen ? "block" : "hidden"
+                    }`}
+                  />
+                </div>
+                <ul className="flex flex-col gap-3">
+                  <li className="flex items-center justify-between">
+                    <h3 className="text-sm font-bold text-gray-700">Name</h3>
+                    <span className="text-right">{selectedContact.name}</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <h3 className="text-sm font-bold text-gray-700">Email</h3>
+                    <span className="text-right">{selectedContact.email}</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <h3 className="text-sm font-bold text-gray-700">Phone</h3>
+                    <span className="text-right">{selectedContact.contact}</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <h3 className="text-sm font-bold text-gray-700">Status</h3>
+                    <span className="text-right">{selectedContact.status}</span>
+                  </li>
+                </ul>
               </div>
-              <ul className="flex flex-col gap-3">
-                <li className="flex items-center justify-between">
-                  <h3 className="text-sm font-bold text-gray-700">Name</h3>
-                  <span className="text-right">{selectedContact.name}</span>
-                </li>
-                <li className="flex items-center justify-between gap-5">
-                  <h3 className="text-sm font-bold text-gray-700">Email</h3>
-                  <span className="text-right">{selectedContact.email}</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <h3 className="text-sm font-bold text-gray-700">Phone</h3>
-                  <span className="text-right">{selectedContact.contact}</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <h3 className="text-sm font-bold text-gray-700">Status</h3>
-                  <span className="text-right">{selectedContact.status}</span>
-                </li>
-              </ul>
-              <div className="flex flex-col gap-4 justify-center text-center">
-                <h1 className="text-lg font-bold text-gray-700">About</h1>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  deserunt perspiciatis eaque impedit quisquam.
-                </p>
-              </div>
-             </div>
             </div>
           </div>
         )}

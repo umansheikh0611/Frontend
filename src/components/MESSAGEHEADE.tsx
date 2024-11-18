@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { SlMagnifier } from "react-icons/sl";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -13,10 +12,7 @@ export default function MessageHead(){
             </h1>
 <div className="flex items-center flex-wrap gap-3 ">
  <div className="flex gap-4" >
- <div className="search w-[200px] h-10  flex items-center bg-white gap-5 px-3 rounded border border-gray-500" >
-    <SlMagnifier className="text-1xl"  />
-        <input type="text" placeholder="Search.." className=" w-full h-full focus:outline-none "/>
-    </div>
+
     <div className="icon-notify  ">
     <IoMdNotificationsOutline  className="text-2xl text-gray-800" />
     </div>
