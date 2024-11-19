@@ -59,7 +59,7 @@ export default function Chat() {
               <IoAdd className="text-2xl text-white" />
             </div>
           </div>
-          <div className="search w-full h-16 flex items-center bg-white gap-5 px-3 rounded border border-gray-500">
+          <div className=" w-full  flex items-center bg-white gap-5 py-3 px-3 rounded border border-gray-500">
             <SlMagnifier className="text-1xl" />
             <input
               type="text"
