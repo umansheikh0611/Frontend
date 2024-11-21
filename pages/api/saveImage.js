@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
         try {
             // Construct the full URL
-            const fullUrl = `http://127.0.0.1:8000/${imageUrl.replace(/^\/+/, "")}`;
+            const fullUrl = `https://ahmed224.pythonanywhere.com/${imageUrl.replace(/^\/+/, "")}`;
 
             // Fetch the image from the server
             const response = await fetch(fullUrl);
