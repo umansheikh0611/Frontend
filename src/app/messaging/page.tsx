@@ -1,8 +1,11 @@
+"use client";
+
 import CHAT from "@/components/CHAT";
 import MessageHead from "@/components/MESSAGEHEADE";
 import SideBar from "@/components/SIDEBAR";
+import withAuth from "@/app/dashboard/withAuth";
 
-export default function Messaging() {
+const Messaging = () => {
   return (
     <div className="messaging-container flex ">
       {/* Sidebar */}
@@ -18,3 +21,5 @@ export default function Messaging() {
     </div>
   );
 }
+
+export default withAuth(Messaging);

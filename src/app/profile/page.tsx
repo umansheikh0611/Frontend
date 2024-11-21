@@ -1,8 +1,11 @@
+"use client";
+
 import ProfileForm from "@/components/FORM";
 import ProfileHead from "@/components/ProfileHead";
 import SideBar from "@/components/SIDEBAR";
+import withAuth from "@/app/dashboard/withAuth";
 
-export default function Profile() {
+const Profile = () => {
   return (
     <main className=" flex overflow-x-hidden min-h-screen">
    
@@ -16,3 +19,5 @@ export default function Profile() {
     </main>
   );
 }
+
+export default withAuth(Profile);

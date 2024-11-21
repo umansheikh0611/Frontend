@@ -1,9 +1,12 @@
+"use client";
+
 import ActivityBoard from "@/components/ACTIVITYBOARD";
 import ActivityHead from "@/components/ACTIVITYHEAD";
 import ActivityLead from "@/components/ACTIVITYLEAD";
 import SideBar from "@/components/SIDEBAR";
+import withAuth from "@/app/dashboard/withAuth";
 
-export default function Activity(){
+const Activity = () => {
     return(
         <div className="flex">
         {/* Sidebar */}
@@ -20,3 +23,5 @@ export default function Activity(){
       </div>
     )
 }
+
+export default withAuth(Activity);
