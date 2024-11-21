@@ -23,7 +23,7 @@ export default function Login({ toggleForm }: LoginProps) {
     setErrorMessage("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/authenticate-doctor/", {
+      const response = await fetch("https://ahmed224.pythonanywhere.com/api/authenticate-doctor/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
