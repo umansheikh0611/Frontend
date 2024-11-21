@@ -58,7 +58,7 @@ export default function ProfileForm() {
   const handleSubmit = async () => {
     try {
       const doctor = JSON.parse(localStorage.getItem("doctor") || "{}");
-      const response = await fetch(`http://127.0.0.1:8000/api/doctor/${doctor.id}/`, {
+      const response = await fetch(`https://ahmed224.pythonanywhere.com/api/doctor/${doctor.id}/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
