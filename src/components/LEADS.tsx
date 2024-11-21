@@ -43,7 +43,7 @@ export default function Leads() {
         const doctorId = doctor.id; // Get `doctor_id` from the stored data
 
         const token = localStorage.getItem("authToken"); // Assuming authToken is used for authentication
-        const response = await fetch("http://127.0.0.1:8000/api/lead/", {
+        const response = await fetch("https://ahmed224.pythonanywhere.com/api/lead/", {
           headers: {
             Authorization: `Bearer ${token}`, // Add token if required
           },
