@@ -144,7 +144,7 @@ export default function SignUp({ toggleForm }: LoginProps) {
     });
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/doctor/", {
+      const response = await fetch("https://ahmed224.pythonanywhere.com/api/doctor/", {
         method: "POST",
         body: formDataToSend,
       });
